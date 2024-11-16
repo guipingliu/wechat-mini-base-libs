@@ -19,13 +19,13 @@ const init = (that) => {
 }
 /**
  * 初始化，刷新第一页调用此页
- * @param {*} http 
- * @param {*} url 
- * @param {*} that 
- * @param {*} body 
- * @param {*} showLoading 
- * @param {*} pagingStart 
- * @param {*} pagingEnd 
+ * @param {*} http
+ * @param {*} url
+ * @param {*} that
+ * @param {*} body
+ * @param {*} showLoading
+ * @param {*} pagingStart
+ * @param {*} pagingEnd
  */
 const refresh = (http, url, that, body = {}, showLoading = true, pagingStart = (body) => {
   return body
@@ -40,10 +40,10 @@ const refresh = (http, url, that, body = {}, showLoading = true, pagingStart = (
 /**
  * 分页
  * 上拉加载调用此方法
- * @param {*} url 
- * @param {*} that 
- * @param {*} body 
- * @param {*} refresh 
+ * @param {*} url
+ * @param {*} that
+ * @param {*} body
+ * @param {*} refresh
  */
 const paging = (http, url, that, body = {}, showLoading = true, pagingStart = (body) => {
   return body

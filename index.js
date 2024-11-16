@@ -11,7 +11,7 @@ import {
   getCurrentToken,
   requestWidthProcessRes
 } from './Http/index.js';
-import { addRequest } from './NetworkRequest/index.js';
+import { addRequest, clearRequests } from './NetworkRequest/index.js';
 import {
   refresh,
   paging
@@ -51,7 +51,8 @@ let http = {
   requestWidthProcessRes
 }
 let networkRequest = {
-  addRequest
+  addRequest,
+  clearRequests
 }
 let page = {
   refresh,

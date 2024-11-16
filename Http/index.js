@@ -25,7 +25,7 @@ const init = (cBaseURL, cBaseToken, cBaseHeader = {}) => {
 
 /**
  * 更新token
- * @param {*} cToken 
+ * @param {*} cToken
  */
 const updateToken = (cToken) => {
   token = cToken
@@ -69,7 +69,7 @@ const requestWidthProcessRes = (url, method = "GET", data = {}, loading = true, 
       })
     }
     request(url, method, data, customHeader).then(res => {
-      if (res.data.code == 200) {
+      if (res.data.code == 200 || res.data.code == 0) {
         if (loading) {
           wx.hideLoading()
         }
@@ -104,9 +104,9 @@ const requestWidthData = (that, url, method = "GET", data = {}, loading = false,
 /**
  * 上传文件 仅支持单个文件上传
  * @param {*} url 接口地址
- * @param {*} filePath 
- * @param {*} name 
- * @param {*} formData 
+ * @param {*} filePath
+ * @param {*} name
+ * @param {*} formData
  */
 const upload = (url, filePath, name = 'files', formData = {
   'fileType': 'IMG'

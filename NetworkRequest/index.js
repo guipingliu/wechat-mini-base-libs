@@ -1,5 +1,5 @@
-const requestList = new Array()
-const resultMap = new Map()
+var requestList = new Array()
+var resultMap = new Map()
 var requestId = 0;
 
 var requesting = false;
@@ -50,6 +50,14 @@ const next = () => {
 
 }
 
+const clearRequests = () => {
+    requestList = new Array()
+    resultMap  = new Map()
+    requestId = 0;
+    requesting = false;
+}
+
 export {
-    addRequest
+    addRequest,
+    clearRequests
 }
